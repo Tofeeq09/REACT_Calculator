@@ -56,7 +56,7 @@ const App = () => {
 
         case '=':
           const result = evaluate(input);
-          setInput(result);
+          setInput("");
           setPrevResult(result);
           break;
   
@@ -97,7 +97,7 @@ const App = () => {
       case '=':
       case 'Enter':
         const result = evaluate(input);
-        setInput(result);
+        setInput("");
         setPrevResult(result);
         break;
 
@@ -168,10 +168,12 @@ const App = () => {
 
   document.addEventListener('keydown', handleKeyPress);
 
+
   return (
     <div className="calculator">
       <div className="display">
         <p className='prevResult'>{prevResult}</p>
+        <p className='autoSum'>{autoSum}</p>
         <hr/>
         <p className='input'>{input}</p>
         </div>
