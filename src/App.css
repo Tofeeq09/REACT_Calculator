@@ -59,3 +59,8 @@ button {
 .prevResult {
   font-size:small
 }
+
+.answers {
+  display:flex;
+  justify-content: space-between;
+}

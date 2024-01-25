@@ -56,7 +56,7 @@ const App = () => {
 
         case '=':
           const result = evaluate(input);
-          setInput("");
+          setInput(result);
           setPrevResult(result);
           break;
   
@@ -95,9 +95,8 @@ const App = () => {
 
     switch (key) {
       case '=':
-      case 'Enter':
         const result = evaluate(input);
-        setInput("");
+        setInput(result);
         setPrevResult(result);
         break;
 
@@ -168,15 +167,11 @@ const App = () => {
 
   document.addEventListener('keydown', handleKeyPress);
 
-
   return (
     <div className="calculator">
-      <div className="display">
-        <p className='prevResult'>{prevResult}</p>
-        <p className='autoSum'>{autoSum}</p>
-        <hr/>
-        <p className='input'>{input}</p>
-        </div>
+      <p>{prevResult}</p>
+      <div className="display">{input}</div>
+      {/* <div className="autoSum">{result}</div> */}
       <div className="buttons">
         {buttons.map((button, index) => (
           <button key={index} onClick={() => handleClick(button)}>
