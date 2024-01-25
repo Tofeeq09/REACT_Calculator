@@ -170,7 +170,11 @@ const App = () => {
 
   return (
     <div className="calculator">
-      <div className="display">{input}</div>
+      <div className="display">
+        <p className='prevResult'>{prevResult}</p>
+        <hr/>
+        <p className='input'>{input}</p>
+        </div>
       <div className="buttons">
         {buttons.map((button, index) => (
           <button key={index} onClick={() => handleClick(button)}>
