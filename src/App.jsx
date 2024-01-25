@@ -171,7 +171,6 @@ const App = () => {
     <div className="calculator">
       <p>{prevResult}</p>
       <div className="display">{input}</div>
-      {/* <div className="autoSum">{result}</div> */}
       <div className="buttons">
         {buttons.map((button, index) => (
           <button key={index} onClick={() => handleClick(button)}>
